@@ -946,5 +946,91 @@ tbody tr:hover { background: rgba(59,130,246,0.04); }
   border-color: var(--accent-blue) !important;
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   FLOATING POTHOLE ALERT CARD
+   ══════════════════════════════════════════════════════════════════ */
+.floating-alert-card {
+  --alert-color: #ef4444; /* Default Pothole Red */
+  --alert-bg-glow: rgba(239, 68, 68, 0.4);
+  --alert-header-bg: rgba(239, 68, 68, 0.15);
+  --alert-header-border: rgba(239, 68, 68, 0.25);
 
-
+  position: fixed;
+  right: 24px;
+  top: 100px;
+  width: 320px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 2px solid var(--alert-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px -5px var(--alert-bg-glow), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+.floating-alert-card.crack {
+  --alert-color: #f97316; /* Crack Orange */
+  --alert-bg-glow: rgba(249, 115, 22, 0.4);
+  --alert-header-bg: rgba(249, 115, 22, 0.15);
+  --alert-header-border: rgba(249, 115, 22, 0.25);
+}
+.floating-alert-card.normal {
+  --alert-color: #10b981; /* Normal Green */
+  --alert-bg-glow: rgba(16, 185, 129, 0.4);
+  --alert-header-bg: rgba(16, 185, 129, 0.15);
+  --alert-header-border: rgba(16, 185, 129, 0.25);
+}
+.floating-alert-card.active {
+  transform: translateX(0);
+  opacity: 1;
+  animation: subtle-blink 3s infinite ease-in-out;
+}
+.floating-alert-header {
+  background: var(--alert-header-bg);
+  border-bottom: 1px solid var(--alert-header-border);
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--alert-color);
+  font-weight: 800;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.floating-alert-body {
+  padding: 0.8rem;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.floating-alert-body p {
+  margin: 0 0 0.6rem 0;
+}
+.pulse-warning-icon {
+  font-size: 1.15rem;
+  animation: pulse-alert-icon 1.2s infinite ease-in-out;
+}
+.pothole-alert-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.68rem;
+  margin-top: 0.5rem;
+}
+@keyframes pulse-alert-icon {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes subtle-blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.78; }
+  100% { opacity: 1; }
+}

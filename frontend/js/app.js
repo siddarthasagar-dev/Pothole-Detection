@@ -858,10 +858,117 @@ function openHistoryPopup(recordId) {
   };
   
   document.getElementById('history-detail-modal').classList.add('active');
+
+  // Trigger floating alert & voice alert depending on record type
+  showAlertCard(record);
 }
 
 function closeHistoryModal() {
   document.getElementById('history-detail-modal').classList.remove('active');
+  hidePotholeAlert();
+}
+
+let currentSpeechUtterance = null;
+let alertSpeechActive = false;
+
+function showAlertCard(record) {
+  const alertCard = document.getElementById('pothole-floating-alert');
+  if (!alertCard) return;
+
+  const header = alertCard.querySelector('.floating-alert-header');
+  const bodyText = alertCard.querySelector('.floating-alert-body p');
+  const confElement = document.getElementById('pothole-alert-conf');
+  const sevElement = document.getElementById('pothole-alert-severity');
+
+  // Reset classes
+  alertCard.className = 'floating-alert-card';
+
+  if (record.damage_type === 'pothole') {
+    alertCard.classList.add('active');
+    header.innerHTML = `<span class="pulse-warning-icon">⚠️</span><strong>Pothole Alert</strong>`;
+    bodyText.textContent = 'A critical road hazard has been identified. Please proceed with caution.';
+    if (sevElement) {
+      sevElement.textContent = record.severity || 'Critical';
+      sevElement.className = `sev-chip ${record.severity || 'Critical'}`;
+      sevElement.style.display = 'inline-block';
+    }
+    if (confElement) confElement.textContent = `${(record.confidence || 0).toFixed(1)}%`;
+    
+    // Voice alert (loops continuously)
+    alertSpeechActive = true;
+    speakVoiceAlert("Pothole detected", true);
+
+  } else if (record.damage_type === 'crack') {
+    alertCard.classList.add('active', 'crack');
+    header.innerHTML = `<span class="pulse-warning-icon">⚡</span><strong>Crack Alert</strong>`;
+    bodyText.textContent = 'A structural road crack has been identified. Drive with caution.';
+    if (sevElement) {
+      sevElement.textContent = record.severity || 'Medium';
+      sevElement.className = `sev-chip ${record.severity || 'Medium'}`;
+      sevElement.style.display = 'inline-block';
+    }
+    if (confElement) confElement.textContent = `${(record.confidence || 0).toFixed(1)}%`;
+    
+    // Voice alert (loops continuously)
+    alertSpeechActive = true;
+    speakVoiceAlert("Crack detected", true);
+
+  } else if (record.damage_type === 'normal') {
+    alertCard.classList.add('active', 'normal');
+    header.innerHTML = `<span class="pulse-warning-icon">✅</span><strong>Road Safe</strong>`;
+    bodyText.textContent = 'Road surface is clear and safe. No anomalies detected.';
+    if (sevElement) {
+      sevElement.style.display = 'none';
+    }
+    if (confElement) confElement.textContent = `${(record.confidence || 0).toFixed(1)}%`;
+    
+    // Voice alert (single announcement, no loop)
+    alertSpeechActive = false;
+    speakVoiceAlert("Road clear", false);
+  }
+}
+
+function speakVoiceAlert(message, shouldLoop) {
+  if (!('speechSynthesis' in window)) return;
+
+  window.speechSynthesis.cancel(); // Stop any active speech
+
+  const utterance = new SpeechSynthesisUtterance(message);
+  
+  // Set parameters for voice clarity
+  utterance.rate = 0.88;  // Slightly slower rate makes it much clearer and more authoritative
+  utterance.pitch = 1.0;  // Standard pitch
+  
+  const voices = window.speechSynthesis.getVoices();
+  let preferredVoice = voices.find(v => v.lang.startsWith('en') && v.name.includes('Google US English')) ||
+                       voices.find(v => v.lang.startsWith('en') && v.name.includes('Google')) ||
+                       voices.find(v => v.lang.startsWith('en') && v.name.includes('Zira')) ||
+                       voices.find(v => v.lang.startsWith('en') && v.name.includes('David')) ||
+                       voices.find(v => v.lang.startsWith('en'));
+  if (preferredVoice) {
+    utterance.voice = preferredVoice;
+  }
+
+  utterance.onend = () => {
+    // If the alert is still active and we should loop
+    if (shouldLoop && alertSpeechActive) {
+      speakVoiceAlert(message, true);
+    }
+  };
+
+  currentSpeechUtterance = utterance;
+  window.speechSynthesis.speak(utterance);
+}
+
+function hidePotholeAlert() {
+  alertSpeechActive = false;
+  const alertCard = document.getElementById('pothole-floating-alert');
+  if (alertCard) {
+    alertCard.classList.remove('active');
+  }
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
 }
 
 async function deleteRecord(id) {
