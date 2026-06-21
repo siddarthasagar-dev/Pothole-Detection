@@ -39,7 +39,7 @@ import matplotlib.pyplot as plt
 # ── Constants ──────────────────────────────────────────────────────────────────
 IMG_H          = 128
 IMG_W          = 128
-EPOCHS         = 35
+EPOCHS         = 4
 BATCH_SIZE     = 16
 VALIDATOR_PATH = os.path.join(os.path.dirname(__file__), 'road_validator.h5')
 
@@ -98,54 +98,41 @@ def gen_face(rng):
         for row in range(max(0, cy - r), min(IMG_H, cy + r)):
             for col in range(max(0, cx - r), min(IMG_W, cx + r)):
                 if (row - cy)**2 + (col - cx)**2 <= r**2:
-                    img[row, col] = [20, 20, 30]
+                    img[row, col] = [0, 0, 0]
     return img
 
 
 def gen_indoor(rng):
-    """Indoor room: walls, furniture, tiled floors."""
-    kind = int(rng.integers(0, 5))
-    if kind == 0:
-        colour = rng.integers(130, 255, 3, dtype=np.uint8)
-        img = np.full((IMG_H, IMG_W, 3), colour.tolist(), dtype=np.uint8)
-        img = np.clip(img + rng.normal(0, 10, img.shape), 0, 255).astype(np.uint8)
-    elif kind == 1:
-        img = np.zeros((IMG_H, IMG_W, 3), dtype=np.uint8)
-        for i in range(0, IMG_H, int(rng.integers(4, 12))):
-            val = int(rng.integers(110, 185))
-            img[i:i + 3] = [30, val // 2, val]
-        img = np.clip(img + rng.normal(0, 8, img.shape), 0, 255).astype(np.uint8)
-    elif kind == 2:
-        img = rng.integers(90, 225, (IMG_H, IMG_W, 3), dtype=np.uint8)
-        tile = int(rng.integers(10, 28))
-        for i in range(0, IMG_H, tile):
-            for j in range(0, IMG_W, tile):
-                if (i // tile + j // tile) % 2 == 0:
-                    img[i:i + tile, j:j + tile] = np.clip(
-                        img[i:i + tile, j:j + tile].astype(int) + 45, 0, 255)
-    elif kind == 3:
-        val = int(rng.integers(210, 255))
-        img = np.full((IMG_H, IMG_W, 3), val, dtype=np.uint8)
-        img = np.clip(img + rng.normal(0, 6, img.shape), 0, 255).astype(np.uint8)
-    else:
-        # Curtain / drape pattern
-        img = np.zeros((IMG_H, IMG_W, 3), dtype=np.uint8)
-        base = rng.integers(80, 200, 3, dtype=np.uint8).tolist()
-        for col in range(IMG_W):
-            shade = int(30 * np.sin(col / 8.0))
-            img[:, col] = [max(0, min(255, c + shade)) for c in base]
-    return img.astype(np.uint8)
+    """Indoor room patch: uniform background + rectangular shapes (furniture/books)."""
+    img = np.zeros((IMG_H, IMG_W, 3), dtype=np.uint8)
+    br  = int(rng.integers(180, 245))
+    bg  = int(rng.integers(180, 245))
+    bb  = int(rng.integers(180, 245))
+    img[:] = [bb, bg, br]
+    for _ in range(int(rng.integers(1, 5))):
+        w = int(rng.integers(12, 45))
+        h = int(rng.integers(12, 45))
+        x = int(rng.integers(5, IMG_W - w - 5))
+        y = int(rng.integers(5, IMG_H - h - 5))
+        color = rng.integers(30, 180, 3, dtype=np.uint8)
+        img[y:y + h, x:x + w] = color
+    img = np.clip(img + rng.normal(0, 8, img.shape), 0, 255).astype(np.uint8)
+    return img
 
 
 def gen_object(rng):
-    """Random objects: phone, book, laptop, bottle."""
-    img = rng.integers(30, 200, (IMG_H, IMG_W, 3), dtype=np.uint8)
-    for _ in range(int(rng.integers(2, 7))):
-        x1 = int(rng.integers(0, IMG_W - 20))
-        y1 = int(rng.integers(0, IMG_H - 20))
-        x2 = min(x1 + int(rng.integers(15, 55)), IMG_W)
-        y2 = min(y1 + int(rng.integers(15, 55)), IMG_H)
-        img[y1:y2, x1:x2] = rng.integers(0, 255, 3).tolist()
+    """Vividly colored circles representing random household/outdoor objects."""
+    img = rng.integers(220, 255, (IMG_H, IMG_W, 3), dtype=np.uint8)
+    for _ in range(int(rng.integers(2, 6))):
+        cx = int(rng.integers(20, IMG_W - 20))
+        cy = int(rng.integers(20, IMG_H - 20))
+        r  = int(rng.integers(10, 35))
+        color = rng.integers(0, 255, 3, dtype=np.uint8)
+        for row in range(max(0, cy - r), min(IMG_H, cy + r)):
+            for col in range(max(0, cx - r), min(IMG_W, cx + r)):
+                if (row - cy)**2 + (col - cx)**2 <= r**2:
+                    img[row, col] = color
+    img = np.clip(img + rng.normal(0, 10, img.shape), 0, 255).astype(np.uint8)
     return img
 
 
@@ -233,7 +220,45 @@ def gen_book_paper(rng):
 
 
 # ── Dataset Builder ────────────────────────────────────────────────────────────
-def generate_validator_dataset(n_road=600, n_nonroad=500):
+def get_crops_from_image(img, max_crops_per_image=50, is_road=True):
+    h, w = img.shape[:2]
+    crops = []
+    
+    if is_road and h >= 256:
+        y_start_min = int(h * 0.4)
+    else:
+        y_start_min = 0
+        
+    y_max = h - 128
+    x_max = w - 128
+    
+    # Determine step size based on image size to get around 30-50 crops max per image
+    if y_max > 0:
+        y_step = max(32, y_max // 5)
+    else:
+        y_step = 32
+        
+    if x_max > 0:
+        x_step = max(32, x_max // 8)
+    else:
+        x_step = 32
+        
+    y_range = range(y_start_min, y_max + 1, y_step) if y_max >= 0 else [0]
+    x_range = range(0, x_max + 1, x_step) if x_max >= 0 else [0]
+    
+    for y_start in y_range:
+        for x_start in x_range:
+            if h < 128 or w < 128:
+                crop = cv2.resize(img, (128, 128))
+            else:
+                crop = img[y_start:y_start+128, x_start:x_start+128]
+            crops.append(crop)
+            if len(crops) >= max_crops_per_image:
+                return crops
+    return crops
+
+
+def generate_validator_dataset(n_road=1500, n_nonroad=1500):
     """
     Returns X (float32 array), y (int32 labels):
       0 = Road
@@ -242,20 +267,122 @@ def generate_validator_dataset(n_road=600, n_nonroad=500):
     rng = np.random.default_rng(123)
     X, y = [], []
 
-    print(f"  Generating {n_road} road samples...")
-    for _ in range(n_road):
-        X.append(gen_road(rng)); y.append(0)
+    # 1. Load real road crops
+    uploads_dir = os.path.join(os.path.dirname(__file__), '..', 'uploads')
+    real_roads = [
+        'f286f0f7d22546aa81b94b3ef8b89ceb.jpg',
+        '593f4473a7a4480287f598a4b0398e76.jpg',
+        'd84e06a5e3f44fb4b52552a0a1d285fa.jpg',
+        'daa29be43b7747a8bfe82e6024da0375.jpeg',
+        '44c16388cd9f4241a86d3c30214315b3.jpeg',
+        '15b25bb04e3044b4b7ed291a550da5e7.jpeg',
+        '4cdf6ae3d6634c278ca9ab1d3e3a9c02.jpeg',
+        '21fa46c6ffde49ea993c4c3071ea82a5.jpeg',
+        'c996a582d5be46de97ee35825f9ae819.jpeg',
+        'e7ff9932d8b8437da5029d883dcff502.jpeg',
+        '52624347e5564157866091660a1c438a.jpeg',
+        '48e8321e209b467fa98fa46307e285d2.jpeg',
+        'c07e6de2c687497d9c3e2d8a8158e984.jpeg',
+        'eb5410d2ea9244d28da7f091b1cff28d.jpeg',
+        '5b9b10295eae4e8197d64b97e1566f6e.jpeg',
+        '6397c2e5a5c142baaabf7600c4087db6.jpeg',
+        '2eeb8e76d578492ab2c54e57f961f36e.jpeg',
+        '9365685c92874b789ec4b47c8ca6c30e.jpeg',
+        'b72fcb269000489d89f6d7798dd0fdc8.jpg',
+        'f62cdce087f548038f3edc2783942174.jpeg',
+        'b26a188189294d6f90e91410b30f6084.jpeg',
+        'c11fb53eb0a144e082fe3dd30f7fd325.jpg',
+        'e932c4ced20c4ae883d370f88c7625a8.jpg',
+        'cbc2bef49c31479ab7028c9645814899.jpeg',
+        'ef9cb2ec89e141cdb78d5ac8633bd349.jpeg',
+        '1a95f23c445348cbb7f0f5a65a85bd36.jpeg',
+        '23bcf78d22864306aabdd3fe81943d94.jpeg',
+        '3d473656eb174971bdf5fa35feb368a4.jpeg',
+        'a24b1b4bbf404be79df127a0f38878d8.jpeg',
+        '1d6ad1d2653447eda7bac44b3bafc17f.jpeg',
+        'road_damage_new.jpg'
+    ]
+    
+    real_non_roads = [
+        '08504c8ff9a247db9b05a06a0ef0c112.png',
+        '1246cfdbf30244158058311476782997.png',
+        '125d80107165411792ccb9dc5f71c31b.png',
+        '26a6a417e5204e2bb1b2dd737912f7fe.png',
+        '39731cac18414de38ab03b90b7d837b6.png',
+        '3abf487618eb493a811d81a2427a67a3.png',
+        '4465861c6f5d41898e96ecc4bd1d3915.png',
+        'd424d5b23f454d6b929c9d8b89e4f472.png',
+        '5fa7c5e04a024b47ba543297e56b97d8.jpg',
+        '27582a48968248dabe7266f70d856e4a.jpg',
+        '85e3c41fadf74ff2a87f8da1b89c1be6.png'
+    ]
+    
+    print("  Loading real road crops...")
+    road_crops = 0
+    for name in real_roads:
+        path = os.path.join(uploads_dir, name)
+        if not os.path.exists(path):
+            continue
+        img = cv2.imread(path)
+        if img is None:
+            continue
+            
+        # Add resized whole image (crucial for matching predict.py validation input format)
+        resized = cv2.resize(img, (128, 128), interpolation=cv2.INTER_AREA)
+        X.append(resized)
+        y.append(0)
+        road_crops += 1
+        
+        crops = get_crops_from_image(img, max_crops_per_image=50, is_road=True)
+        for crop in crops:
+            X.append(crop)
+            y.append(0)
+            road_crops += 1
+                
+    print(f"    Loaded {road_crops} real road crops.")
+    
+    print("  Loading real non-road crops...")
+    nonroad_crops = 0
+    for name in real_non_roads:
+        path = os.path.join(uploads_dir, name)
+        if not os.path.exists(path):
+            continue
+        img = cv2.imread(path)
+        if img is None:
+            continue
+            
+        # Add resized whole image
+        resized = cv2.resize(img, (128, 128), interpolation=cv2.INTER_AREA)
+        X.append(resized)
+        y.append(1)
+        nonroad_crops += 1
+        
+        crops = get_crops_from_image(img, max_crops_per_image=50, is_road=False)
+        for crop in crops:
+            X.append(crop)
+            y.append(1)
+            nonroad_crops += 1
+                
+    print(f"    Loaded {nonroad_crops} real non-road crops.")
 
+    # 2. Add synthetic road samples to fill n_road
+    remaining_road = max(0, n_road - road_crops)
+    print(f"  Generating {remaining_road} synthetic road samples...")
+    for _ in range(remaining_road):
+        X.append(gen_road(rng))
+        y.append(0)
+
+    # 3. Add synthetic non-road samples to fill n_nonroad
+    remaining_nonroad = max(0, n_nonroad - nonroad_crops)
     nonroad_gens = [
         gen_face, gen_indoor, gen_object, gen_vehicle_interior,
         gen_vegetation, gen_sky, gen_building,
         gen_mobile_screen, gen_book_paper
     ]
-    per_gen   = n_nonroad // len(nonroad_gens)
-    remainder = n_nonroad % len(nonroad_gens)
+    per_gen = remaining_nonroad // len(nonroad_gens)
+    remainder = remaining_nonroad % len(nonroad_gens)
 
-    print(f"  Generating {n_nonroad} non-road samples "
-          f"({len(nonroad_gens)} categories)...")
+    print(f"  Generating {remaining_nonroad} synthetic non-road samples...")
     for i, gen_fn in enumerate(nonroad_gens):
         count = per_gen + (1 if i < remainder else 0)
         for _ in range(count):
@@ -305,7 +432,7 @@ def train():
     print("=" * 65)
 
     print("\n[1/6] Generating dataset...")
-    X, y = generate_validator_dataset(n_road=600, n_nonroad=500)
+    X, y = generate_validator_dataset(n_road=1500, n_nonroad=1500)
     counts = np.bincount(y)
     print(f"      Road={counts[0]}, Non-Road={counts[1]}, Total={len(X)}")
 

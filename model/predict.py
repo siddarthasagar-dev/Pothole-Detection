@@ -227,13 +227,11 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
     print("road (raw):",road_conf)
     print("non_road (raw):",non_road_conf)
     
-    # Overwrite scores to dynamically accept non-face images
-    road_conf = max(road_conf, 92.5)
-    non_road_conf = 100.0 - road_conf
-    if road_conf < 40.0:
+
+    if road_conf < 10.0:
         reason = (
             f"No road detected. Please capture a road image. "
-            f"(Road confidence: {road_conf:.1f}% is below 40% threshold). "
+            f"(Road confidence: {road_conf:.1f}% is below 10% threshold). "
             f"Faces, indoor scenes, walls, ceilings, objects, books, furniture, vehicles, and selfies are not accepted."
         )
         return {
@@ -258,7 +256,7 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
     # Morphological Black Hat identifies dark elements on lighter background
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (25, 25))
     blackhat = cv2.morphologyEx(blurred_gray, cv2.MORPH_BLACKHAT, kernel)
-    _, thresh = cv2.threshold(blackhat, 12, 255, cv2.THRESH_BINARY)
+    _, thresh = cv2.threshold(blackhat, 22, 255, cv2.THRESH_BINARY)
     
     # Intersect candidates with road segmented area
     road_thresh = cv2.bitwise_and(thresh, road_mask)
@@ -376,7 +374,7 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
 
         # d) Ignore shadows (low texture variation)
         std_brightness = np.std(roi_gray)
-        if std_brightness < 12.0:
+        if std_brightness < 6.0:
             rejected_detections.append({
                 'damage_type': label,
                 'confidence': round(confidence, 2),
@@ -386,9 +384,9 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
             })
             continue
 
-        # e) Ignore speed breakers / horizontal bounds
+        # e) Ignore speed breakers / horizontal bounds (only for potholes)
         aspect_ratio = w / float(h)
-        if aspect_ratio > 4.5:
+        if label == 'pothole' and aspect_ratio > 4.5:
             rejected_detections.append({
                 'damage_type': label,
                 'confidence': round(confidence, 2),
@@ -398,13 +396,13 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
             })
             continue
 
-        # Threshold check: damage confidence >= 85%
-        if confidence < 85.0:
+        # Threshold check: damage confidence >= 70%
+        if confidence < 70.0:
             rejected_detections.append({
                 'damage_type': label,
                 'confidence': round(confidence, 2),
                 'bounding_box': [x, y, w, h],
-                'reason': 'Confidence below 85% threshold',
+                'reason': 'Confidence below 70% threshold',
                 'severity': 'None'
             })
             continue
@@ -427,7 +425,7 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
         whole_label = DAMAGE_CLASSES[whole_idx]
         whole_conf = float(whole_probs[whole_idx]) * 100
         
-        if whole_label != 'normal' and whole_conf >= 85.0:
+        if whole_label != 'normal' and whole_conf >= 70.0:
             fb_w = int(orig_w * 0.35)
             fb_h = int(orig_h * 0.25)
             fb_x = int((orig_w - fb_w) / 2)
@@ -514,7 +512,7 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
         'damage_type': overall_type,
         'confidence': round(overall_conf, 2),
         'severity': overall_sev,
-        'above_threshold': overall_conf >= 85.0 if overall_type != 'normal' else True,
+        'above_threshold': overall_conf >= 70.0 if overall_type != 'normal' else True,
         'detections': verified_detections,
         'rejected_detections': [{
             'damage_type': rd['damage_type'],
@@ -540,10 +538,9 @@ def predict_from_array(img_batch: np.ndarray) -> dict:
     
     val_probs = val_model.predict(img_batch, verbose=0)[0]
     road_conf = float(val_probs[0]) * 100
-    road_conf = max(road_conf, 92.5)
-    non_road_conf = 100.0 - road_conf
+    non_road_conf = float(val_probs[1]) * 100
     
-    if road_conf < 40.0:
+    if road_conf < 10.0:
         return {
             'road_valid': False,
             'reject_reason': 'No road detected. Please capture a road image.',
@@ -570,7 +567,7 @@ def predict_from_array(img_batch: np.ndarray) -> dict:
         'damage_type': label,
         'confidence': round(confidence, 2),
         'severity': severity,
-        'above_threshold': confidence >= 85.0,
+        'above_threshold': confidence >= 70.0,
         'all_scores': {
             'normal': round(float(probs[0]) * 100, 2),
             'pothole': round(float(probs[1]) * 100, 2),
@@ -590,14 +587,14 @@ def predict_debug(img_batch: np.ndarray) -> dict:
         'validator': {
             'road': round(float(val_probs[0]) * 100, 3),
             'non_road': round(float(val_probs[1]) * 100, 3),
-            'threshold_used': 40.0,
+            'threshold_used': 10.0,
             'rejected': False
         },
         'damage': {
             'normal': round(float(dmg_probs[0]) * 100, 3),
             'pothole': round(float(dmg_probs[1]) * 100, 3),
             'crack': round(float(dmg_probs[2]) * 100, 3),
-            'threshold_used': 85.0,
+            'threshold_used': 70.0,
         },
         'pipeline_result': predict_from_array(img_batch)
     }
