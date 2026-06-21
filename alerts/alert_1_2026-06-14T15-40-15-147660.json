@@ -1,0 +1,13 @@
+{
+  "action": "NEW REPORT",
+  "record_id": 1,
+  "damage_type": "crack",
+  "severity": "Medium",
+  "confidence": 94.98,
+  "location": {
+    "latitude": 17.390113160050618,
+    "longitude": 78.60804945873383
+  },
+  "image_path": "uploads\\27582a48968248dabe7266f70d856e4a.jpg",
+  "reported_at": "2026-06-14T15:40:15.147660"
+}

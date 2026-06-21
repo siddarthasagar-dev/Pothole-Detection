@@ -1,0 +1,871 @@
+2026-06-14 20:18:38,612 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2026-06-14 20:18:38,612 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-14 20:18:38,615 | INFO |  * Restarting with stat
+2026-06-14 20:18:46,815 | WARNING |  * Debugger is active!
+2026-06-14 20:18:46,833 | INFO |  * Debugger PIN: 122-253-436
+2026-06-14 20:18:48,669 | INFO | 127.0.0.1 - - [14/Jun/2026 20:18:48] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:18:48,692 | INFO | 127.0.0.1 - - [14/Jun/2026 20:18:48] "GET /stats HTTP/1.1" 200 -
+2026-06-14 20:19:18,647 | INFO | 127.0.0.1 - - [14/Jun/2026 20:19:18] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:19:21,546 | WARNING | TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-06-14 20:19:21,574 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-14 20:19:28,913 | INFO | 127.0.0.1 - - [14/Jun/2026 20:19:28] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 20:19:48,643 | INFO | 127.0.0.1 - - [14/Jun/2026 20:19:48] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:20:18,317 | INFO | 127.0.0.1 - - [14/Jun/2026 20:20:18] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:20:35,247 | INFO | 127.0.0.1 - - [14/Jun/2026 20:20:35] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 20:20:48,328 | INFO | 127.0.0.1 - - [14/Jun/2026 20:20:48] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:21:18,635 | INFO | 127.0.0.1 - - [14/Jun/2026 20:21:18] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:21:48,390 | INFO | 127.0.0.1 - - [14/Jun/2026 20:21:48] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:22:18,706 | INFO | 127.0.0.1 - - [14/Jun/2026 20:22:18] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:23:40,698 | INFO | 127.0.0.1 - - [14/Jun/2026 20:23:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:24:40,391 | INFO | 127.0.0.1 - - [14/Jun/2026 20:24:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:25:40,706 | INFO | 127.0.0.1 - - [14/Jun/2026 20:25:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:26:40,403 | INFO | 127.0.0.1 - - [14/Jun/2026 20:26:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:27:40,705 | INFO | 127.0.0.1 - - [14/Jun/2026 20:27:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:28:40,387 | INFO | 127.0.0.1 - - [14/Jun/2026 20:28:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:29:40,719 | INFO | 127.0.0.1 - - [14/Jun/2026 20:29:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:30:40,396 | INFO | 127.0.0.1 - - [14/Jun/2026 20:30:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:31:40,700 | INFO | 127.0.0.1 - - [14/Jun/2026 20:31:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:32:29,759 | INFO | 127.0.0.1 - - [14/Jun/2026 20:32:29] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:32:48,636 | INFO | 127.0.0.1 - - [14/Jun/2026 20:32:48] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:32:49,786 | INFO | 127.0.0.1 - - [14/Jun/2026 20:32:49] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 20:33:18,640 | INFO | 127.0.0.1 - - [14/Jun/2026 20:33:18] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:33:39,462 | INFO | 127.0.0.1 - - [14/Jun/2026 20:33:39] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 20:33:45,135 | INFO | 127.0.0.1 - - [14/Jun/2026 20:33:45] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 20:33:48,329 | INFO | 127.0.0.1 - - [14/Jun/2026 20:33:48] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:34:18,713 | INFO | 127.0.0.1 - - [14/Jun/2026 20:34:18] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:34:48,390 | INFO | 127.0.0.1 - - [14/Jun/2026 20:34:48] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:35:40,706 | INFO | 127.0.0.1 - - [14/Jun/2026 20:35:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:36:40,384 | INFO | 127.0.0.1 - - [14/Jun/2026 20:36:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:37:40,706 | INFO | 127.0.0.1 - - [14/Jun/2026 20:37:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 20:38:40,383 | INFO | 127.0.0.1 - - [14/Jun/2026 20:38:40] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:09:18,558 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2026-06-14 21:09:18,558 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-14 21:09:18,577 | INFO |  * Restarting with stat
+2026-06-14 21:09:23,132 | WARNING |  * Debugger is active!
+2026-06-14 21:09:23,149 | INFO |  * Debugger PIN: 122-253-436
+2026-06-14 21:09:36,679 | INFO | 127.0.0.1 - - [14/Jun/2026 21:09:36] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:09:36,699 | INFO | 127.0.0.1 - - [14/Jun/2026 21:09:36] "GET /stats HTTP/1.1" 200 -
+2026-06-14 21:09:37,866 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2026-06-14 21:09:37,879 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-14 21:09:37,883 | INFO |  * Restarting with stat
+2026-06-14 21:09:47,183 | WARNING |  * Debugger is active!
+2026-06-14 21:09:47,203 | INFO |  * Debugger PIN: 122-253-436
+2026-06-14 21:09:58,988 | WARNING | TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-06-14 21:09:59,007 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-14 21:10:06,633 | INFO | 127.0.0.1 - - [14/Jun/2026 21:10:06] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:10:08,450 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-14 21:10:15,147 | WARNING | {"action": "NEW REPORT", "record_id": 1, "damage_type": "crack", "severity": "Medium", "confidence": 94.98, "location": {"latitude": 17.390113160050618, "longitude": 78.60804945873383}, "image_path": "uploads\\27582a48968248dabe7266f70d856e4a.jpg", "reported_at": "2026-06-14T15:40:15.147660"}
+2026-06-14 21:10:15,160 | INFO | 127.0.0.1 - - [14/Jun/2026 21:10:15] "POST /detect HTTP/1.1" 200 -
+2026-06-14 21:10:16,012 | INFO | 127.0.0.1 - - [14/Jun/2026 21:10:16] "GET /stats HTTP/1.1" 200 -
+2026-06-14 21:10:36,315 | INFO | 127.0.0.1 - - [14/Jun/2026 21:10:36] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:11:06,635 | INFO | 127.0.0.1 - - [14/Jun/2026 21:11:06] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:11:16,998 | INFO | 127.0.0.1 - - [14/Jun/2026 21:11:16] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 21:11:36,635 | INFO | 127.0.0.1 - - [14/Jun/2026 21:11:36] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:11:40,750 | INFO | 127.0.0.1 - - [14/Jun/2026 21:11:40] "POST /detect HTTP/1.1" 200 -
+2026-06-14 21:11:41,582 | INFO | 127.0.0.1 - - [14/Jun/2026 21:11:41] "GET /stats HTTP/1.1" 200 -
+2026-06-14 21:12:06,325 | INFO | 127.0.0.1 - - [14/Jun/2026 21:12:06] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:12:36,648 | INFO | 127.0.0.1 - - [14/Jun/2026 21:12:36] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:13:06,327 | INFO | 127.0.0.1 - - [14/Jun/2026 21:13:06] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:13:44,641 | INFO | 127.0.0.1 - - [14/Jun/2026 21:13:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:14:44,326 | INFO | 127.0.0.1 - - [14/Jun/2026 21:14:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:15:44,647 | INFO | 127.0.0.1 - - [14/Jun/2026 21:15:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:15:46,777 | INFO |  * Detected change in 'C:\\Users\\ramya\\OneDrive\\Desktop\\mini akki\\model\\predict.py', reloading
+2026-06-14 21:15:47,351 | INFO |  * Detected change in 'C:\\Users\\ramya\\OneDrive\\Desktop\\mini akki\\model\\predict.py', reloading
+2026-06-14 21:15:48,206 | INFO |  * Restarting with stat
+2026-06-14 21:15:48,448 | INFO |  * Restarting with stat
+2026-06-14 21:15:56,892 | WARNING |  * Debugger is active!
+2026-06-14 21:15:56,908 | INFO |  * Debugger PIN: 122-253-436
+2026-06-14 21:15:56,999 | WARNING |  * Debugger is active!
+2026-06-14 21:15:57,016 | INFO |  * Debugger PIN: 122-253-436
+2026-06-14 21:16:44,644 | INFO | 127.0.0.1 - - [14/Jun/2026 21:16:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:19:07,576 | INFO | 127.0.0.1 - - [14/Jun/2026 21:19:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:19:07,603 | INFO | 127.0.0.1 - - [14/Jun/2026 21:19:07] "GET /stats HTTP/1.1" 200 -
+2026-06-14 21:19:08,725 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2026-06-14 21:19:08,725 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-14 21:19:08,725 | INFO |  * Restarting with stat
+2026-06-14 21:19:17,807 | WARNING |  * Debugger is active!
+2026-06-14 21:19:17,832 | INFO |  * Debugger PIN: 122-253-436
+2026-06-14 21:19:27,832 | WARNING | TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-06-14 21:19:27,840 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-14 21:19:34,073 | INFO | 127.0.0.1 - - [14/Jun/2026 21:19:34] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 21:19:37,573 | INFO | 127.0.0.1 - - [14/Jun/2026 21:19:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:19:56,645 | INFO | 127.0.0.1 - - [14/Jun/2026 21:19:56] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 21:20:07,573 | INFO | 127.0.0.1 - - [14/Jun/2026 21:20:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:20:37,262 | INFO | 127.0.0.1 - - [14/Jun/2026 21:20:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:20:49,674 | INFO | 127.0.0.1 - - [14/Jun/2026 21:20:49] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 21:21:07,257 | INFO | 127.0.0.1 - - [14/Jun/2026 21:21:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:21:37,571 | INFO | 127.0.0.1 - - [14/Jun/2026 21:21:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:22:07,256 | INFO | 127.0.0.1 - - [14/Jun/2026 21:22:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:22:37,572 | INFO | 127.0.0.1 - - [14/Jun/2026 21:22:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:23:07,255 | INFO | 127.0.0.1 - - [14/Jun/2026 21:23:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:23:37,569 | INFO | 127.0.0.1 - - [14/Jun/2026 21:23:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:24:07,252 | INFO | 127.0.0.1 - - [14/Jun/2026 21:24:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:24:37,568 | INFO | 127.0.0.1 - - [14/Jun/2026 21:24:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:25:07,254 | INFO | 127.0.0.1 - - [14/Jun/2026 21:25:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:25:37,567 | INFO | 127.0.0.1 - - [14/Jun/2026 21:25:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:26:07,339 | INFO | 127.0.0.1 - - [14/Jun/2026 21:26:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:26:37,651 | INFO | 127.0.0.1 - - [14/Jun/2026 21:26:37] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:27:44,655 | INFO | 127.0.0.1 - - [14/Jun/2026 21:27:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:28:44,330 | INFO | 127.0.0.1 - - [14/Jun/2026 21:28:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:29:44,646 | INFO | 127.0.0.1 - - [14/Jun/2026 21:29:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:30:44,332 | INFO | 127.0.0.1 - - [14/Jun/2026 21:30:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:31:44,649 | INFO | 127.0.0.1 - - [14/Jun/2026 21:31:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:32:44,339 | INFO | 127.0.0.1 - - [14/Jun/2026 21:32:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:33:44,655 | INFO | 127.0.0.1 - - [14/Jun/2026 21:33:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:34:44,339 | INFO | 127.0.0.1 - - [14/Jun/2026 21:34:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:35:44,642 | INFO | 127.0.0.1 - - [14/Jun/2026 21:35:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:36:44,325 | INFO | 127.0.0.1 - - [14/Jun/2026 21:36:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:37:44,640 | INFO | 127.0.0.1 - - [14/Jun/2026 21:37:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:38:44,328 | INFO | 127.0.0.1 - - [14/Jun/2026 21:38:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:39:44,642 | INFO | 127.0.0.1 - - [14/Jun/2026 21:39:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:40:44,331 | INFO | 127.0.0.1 - - [14/Jun/2026 21:40:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:41:44,639 | INFO | 127.0.0.1 - - [14/Jun/2026 21:41:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:42:44,338 | INFO | 127.0.0.1 - - [14/Jun/2026 21:42:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:43:44,647 | INFO | 127.0.0.1 - - [14/Jun/2026 21:43:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:44:44,328 | INFO | 127.0.0.1 - - [14/Jun/2026 21:44:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:45:44,650 | INFO | 127.0.0.1 - - [14/Jun/2026 21:45:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:46:44,342 | INFO | 127.0.0.1 - - [14/Jun/2026 21:46:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:47:44,635 | INFO | 127.0.0.1 - - [14/Jun/2026 21:47:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:48:44,330 | INFO | 127.0.0.1 - - [14/Jun/2026 21:48:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:49:44,639 | INFO | 127.0.0.1 - - [14/Jun/2026 21:49:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:50:44,331 | INFO | 127.0.0.1 - - [14/Jun/2026 21:50:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:51:44,631 | INFO | 127.0.0.1 - - [14/Jun/2026 21:51:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:52:44,339 | INFO | 127.0.0.1 - - [14/Jun/2026 21:52:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:53:44,657 | INFO | 127.0.0.1 - - [14/Jun/2026 21:53:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:54:44,338 | INFO | 127.0.0.1 - - [14/Jun/2026 21:54:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:55:44,639 | INFO | 127.0.0.1 - - [14/Jun/2026 21:55:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:56:44,329 | INFO | 127.0.0.1 - - [14/Jun/2026 21:56:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:57:44,629 | INFO | 127.0.0.1 - - [14/Jun/2026 21:57:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:58:44,344 | INFO | 127.0.0.1 - - [14/Jun/2026 21:58:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 21:59:44,630 | INFO | 127.0.0.1 - - [14/Jun/2026 21:59:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:00:44,334 | INFO | 127.0.0.1 - - [14/Jun/2026 22:00:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:01:44,654 | INFO | 127.0.0.1 - - [14/Jun/2026 22:01:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:02:44,324 | INFO | 127.0.0.1 - - [14/Jun/2026 22:02:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:03:44,648 | INFO | 127.0.0.1 - - [14/Jun/2026 22:03:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:04:44,338 | INFO | 127.0.0.1 - - [14/Jun/2026 22:04:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:05:44,658 | INFO | 127.0.0.1 - - [14/Jun/2026 22:05:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:06:44,344 | INFO | 127.0.0.1 - - [14/Jun/2026 22:06:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:07:44,641 | INFO | 127.0.0.1 - - [14/Jun/2026 22:07:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:08:44,343 | INFO | 127.0.0.1 - - [14/Jun/2026 22:08:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:09:44,638 | INFO | 127.0.0.1 - - [14/Jun/2026 22:09:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:10:44,332 | INFO | 127.0.0.1 - - [14/Jun/2026 22:10:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:11:44,656 | INFO | 127.0.0.1 - - [14/Jun/2026 22:11:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:12:44,332 | INFO | 127.0.0.1 - - [14/Jun/2026 22:12:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:13:44,656 | INFO | 127.0.0.1 - - [14/Jun/2026 22:13:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:14:44,331 | INFO | 127.0.0.1 - - [14/Jun/2026 22:14:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:15:44,642 | INFO | 127.0.0.1 - - [14/Jun/2026 22:15:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:16:44,330 | INFO | 127.0.0.1 - - [14/Jun/2026 22:16:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:17:44,651 | INFO | 127.0.0.1 - - [14/Jun/2026 22:17:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:18:44,333 | INFO | 127.0.0.1 - - [14/Jun/2026 22:18:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:19:44,630 | INFO | 127.0.0.1 - - [14/Jun/2026 22:19:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:20:44,334 | INFO | 127.0.0.1 - - [14/Jun/2026 22:20:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:21:44,647 | INFO | 127.0.0.1 - - [14/Jun/2026 22:21:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:22:44,325 | INFO | 127.0.0.1 - - [14/Jun/2026 22:22:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:23:44,642 | INFO | 127.0.0.1 - - [14/Jun/2026 22:23:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:24:44,332 | INFO | 127.0.0.1 - - [14/Jun/2026 22:24:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 22:25:44,653 | INFO | 127.0.0.1 - - [14/Jun/2026 22:25:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:04:00,962 | INFO | 127.0.0.1 - - [14/Jun/2026 23:04:00] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:04:07,336 | INFO | 127.0.0.1 - - [14/Jun/2026 23:04:07] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:04:46,685 | INFO | 127.0.0.1 - - [14/Jun/2026 23:04:46] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:04:46,695 | INFO | 127.0.0.1 - - [14/Jun/2026 23:04:46] "GET /stats HTTP/1.1" 200 -
+2026-06-14 23:05:00,641 | INFO | 127.0.0.1 - - [14/Jun/2026 23:05:00] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-14 23:05:16,673 | INFO | 127.0.0.1 - - [14/Jun/2026 23:05:16] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:05:46,364 | INFO | 127.0.0.1 - - [14/Jun/2026 23:05:46] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:06:16,671 | INFO | 127.0.0.1 - - [14/Jun/2026 23:06:16] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:06:32,319 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2026-06-14 23:06:32,319 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-14 23:06:32,338 | INFO |  * Restarting with stat
+2026-06-14 23:06:38,217 | WARNING |  * Debugger is active!
+2026-06-14 23:06:38,231 | INFO |  * Debugger PIN: 122-253-436
+2026-06-14 23:06:47,328 | INFO | 127.0.0.1 - - [14/Jun/2026 23:06:47] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:07:17,638 | INFO | 127.0.0.1 - - [14/Jun/2026 23:07:17] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:07:47,328 | INFO | 127.0.0.1 - - [14/Jun/2026 23:07:47] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:08:44,658 | INFO | 127.0.0.1 - - [14/Jun/2026 23:08:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:09:44,334 | INFO | 127.0.0.1 - - [14/Jun/2026 23:09:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:10:44,644 | INFO | 127.0.0.1 - - [14/Jun/2026 23:10:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:11:44,343 | INFO | 127.0.0.1 - - [14/Jun/2026 23:11:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:12:44,642 | INFO | 127.0.0.1 - - [14/Jun/2026 23:12:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:13:44,339 | INFO | 127.0.0.1 - - [14/Jun/2026 23:13:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:14:44,656 | INFO | 127.0.0.1 - - [14/Jun/2026 23:14:44] "GET /health HTTP/1.1" 200 -
+2026-06-14 23:15:44,642 | INFO | 127.0.0.1 - - [14/Jun/2026 23:15:44] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:08:11,965 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 07:08:11,965 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 07:08:11,967 | INFO |  * Restarting with stat
+2026-06-15 07:08:15,042 | WARNING |  * Debugger is active!
+2026-06-15 07:08:15,061 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:08:52,485 | INFO | 127.0.0.1 - - [15/Jun/2026 07:08:52] "[33mGET / HTTP/1.1[0m" 404 -
+2026-06-15 07:08:52,566 | INFO | 127.0.0.1 - - [15/Jun/2026 07:08:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-15 07:08:54,357 | INFO | 127.0.0.1 - - [15/Jun/2026 07:08:54] "[33mGET / HTTP/1.1[0m" 404 -
+2026-06-15 07:09:12,127 | INFO | 127.0.0.1 - - [15/Jun/2026 07:09:12] "[33mGET / HTTP/1.1[0m" 404 -
+2026-06-15 07:09:13,773 | INFO | 127.0.0.1 - - [15/Jun/2026 07:09:13] "[33mGET / HTTP/1.1[0m" 404 -
+2026-06-15 07:10:39,206 | INFO | 127.0.0.1 - - [15/Jun/2026 07:10:39] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:12:30,487 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/backend/app.py', reloading
+2026-06-15 07:12:31,048 | INFO |  * Restarting with stat
+2026-06-15 07:12:35,527 | WARNING |  * Debugger is active!
+2026-06-15 07:12:35,555 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:12:36,637 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/run.py', reloading
+2026-06-15 07:12:36,976 | INFO |  * Restarting with stat
+2026-06-15 07:12:39,584 | WARNING |  * Debugger is active!
+2026-06-15 07:12:39,603 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:13:20,039 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 07:13:20,039 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 07:13:20,040 | INFO |  * Restarting with stat
+2026-06-15 07:13:22,812 | WARNING |  * Debugger is active!
+2026-06-15 07:13:22,834 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:13:22,860 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:22] "GET / HTTP/1.1" 200 -
+2026-06-15 07:13:22,910 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:22] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:13:22,911 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:22] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:13:23,310 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:23] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:13:23,321 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:23] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:13:31,160 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:31] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:13:35,031 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:35] "[36mGET / HTTP/1.1[0m" 304 -
+2026-06-15 07:13:35,042 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:35] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:13:35,043 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:35] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:13:35,087 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:35] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:13:35,089 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:35] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:13:53,335 | INFO | 127.0.0.1 - - [15/Jun/2026 07:13:53] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:14:23,332 | INFO | 127.0.0.1 - - [15/Jun/2026 07:14:23] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:14:53,352 | INFO | 127.0.0.1 - - [15/Jun/2026 07:14:53] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:15:01,903 | INFO | 127.0.0.1 - - [15/Jun/2026 07:15:01] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 07:15:23,340 | INFO | 127.0.0.1 - - [15/Jun/2026 07:15:23] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:15:27,619 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:15:28,116 | INFO | 127.0.0.1 - - [15/Jun/2026 07:15:28] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 07:15:53,333 | INFO | 127.0.0.1 - - [15/Jun/2026 07:15:53] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:16:23,337 | INFO | 127.0.0.1 - - [15/Jun/2026 07:16:23] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:16:54,124 | INFO | 127.0.0.1 - - [15/Jun/2026 07:16:54] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:17:23,334 | INFO | 127.0.0.1 - - [15/Jun/2026 07:17:23] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:17:53,341 | INFO | 127.0.0.1 - - [15/Jun/2026 07:17:53] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:18:24,462 | INFO | 127.0.0.1 - - [15/Jun/2026 07:18:24] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:18:53,333 | INFO | 127.0.0.1 - - [15/Jun/2026 07:18:53] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:19:04,190 | INFO | 127.0.0.1 - - [15/Jun/2026 07:19:04] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 07:19:23,333 | INFO | 127.0.0.1 - - [15/Jun/2026 07:19:23] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:19:54,123 | INFO | 127.0.0.1 - - [15/Jun/2026 07:19:54] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:20:24,114 | INFO | 127.0.0.1 - - [15/Jun/2026 07:20:24] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:21:26,447 | INFO | 127.0.0.1 - - [15/Jun/2026 07:21:26] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:21:54,121 | INFO | 127.0.0.1 - - [15/Jun/2026 07:21:54] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:22:19,299 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/model/predict.py', reloading
+2026-06-15 07:22:19,894 | INFO |  * Restarting with stat
+2026-06-15 07:22:24,314 | WARNING |  * Debugger is active!
+2026-06-15 07:22:24,338 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:22:24,362 | INFO | 127.0.0.1 - - [15/Jun/2026 07:22:24] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:23:29,429 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 07:23:29,429 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 07:23:29,430 | INFO |  * Restarting with stat
+2026-06-15 07:23:32,159 | WARNING |  * Debugger is active!
+2026-06-15 07:23:32,179 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:23:32,206 | INFO | 127.0.0.1 - - [15/Jun/2026 07:23:32] "[36mGET / HTTP/1.1[0m" 304 -
+2026-06-15 07:23:32,242 | INFO | 127.0.0.1 - - [15/Jun/2026 07:23:32] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:23:32,243 | INFO | 127.0.0.1 - - [15/Jun/2026 07:23:32] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:23:32,376 | INFO | 127.0.0.1 - - [15/Jun/2026 07:23:32] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:23:32,380 | INFO | 127.0.0.1 - - [15/Jun/2026 07:23:32] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:23:54,499 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:23:55,008 | INFO | 127.0.0.1 - - [15/Jun/2026 07:23:55] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 07:24:03,114 | INFO | 127.0.0.1 - - [15/Jun/2026 07:24:03] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:24:32,410 | INFO | 127.0.0.1 - - [15/Jun/2026 07:24:32] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:25:02,403 | INFO | 127.0.0.1 - - [15/Jun/2026 07:25:02] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:25:18,537 | INFO | 127.0.0.1 - - [15/Jun/2026 07:25:18] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 07:25:32,402 | INFO | 127.0.0.1 - - [15/Jun/2026 07:25:32] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:26:03,120 | INFO | 127.0.0.1 - - [15/Jun/2026 07:26:03] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:26:33,118 | INFO | 127.0.0.1 - - [15/Jun/2026 07:26:33] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:27:40,167 | INFO | 127.0.0.1 - - [15/Jun/2026 07:27:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:28:19,401 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/backend/app.py', reloading
+2026-06-15 07:28:19,838 | INFO |  * Restarting with stat
+2026-06-15 07:28:23,029 | WARNING |  * Debugger is active!
+2026-06-15 07:28:23,047 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:28:30,461 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/model/predict.py', reloading
+2026-06-15 07:28:30,796 | INFO |  * Restarting with stat
+2026-06-15 07:28:33,993 | WARNING |  * Debugger is active!
+2026-06-15 07:28:34,014 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:28:40,158 | INFO | 127.0.0.1 - - [15/Jun/2026 07:28:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:29:16,048 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 07:29:16,048 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 07:29:16,048 | INFO |  * Restarting with stat
+2026-06-15 07:29:19,058 | WARNING |  * Debugger is active!
+2026-06-15 07:29:19,078 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:29:19,106 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:19] "GET / HTTP/1.1" 200 -
+2026-06-15 07:29:19,153 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:19] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:29:19,154 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:19] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:29:19,340 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:19] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:29:19,342 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:19] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:29:33,131 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:29:33,827 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:29:34,494 | WARNING | {"action": "NEW REPORT", "record_id": 2, "damage_type": "crack", "severity": "Medium", "confidence": 99.81, "location": {"latitude": 17.389942710826265, "longitude": 78.60733146003669}, "image_path": "uploads/21fa46c6ffde49ea993c4c3071ea82a5.jpeg", "reported_at": "2026-06-15T01:59:34.494719"}
+2026-06-15 07:29:34,495 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:34] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:29:35,008 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:35] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:29:49,355 | INFO | 127.0.0.1 - - [15/Jun/2026 07:29:49] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:30:03,427 | WARNING | {"action": "UPDATED", "record_id": 2, "damage_type": "crack", "severity": "Medium", "confidence": 97.44, "location": {"latitude": 17.389942710826265, "longitude": 78.60733146003669}, "image_path": "uploads/1d6ad1d2653447eda7bac44b3bafc17f.jpeg", "reported_at": "2026-06-15T02:00:03.427855"}
+2026-06-15 07:30:03,428 | INFO | 127.0.0.1 - - [15/Jun/2026 07:30:03] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:30:03,937 | INFO | 127.0.0.1 - - [15/Jun/2026 07:30:03] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:30:16,904 | INFO | 127.0.0.1 - - [15/Jun/2026 07:30:16] "POST /predict/debug HTTP/1.1" 200 -
+2026-06-15 07:30:19,354 | INFO | 127.0.0.1 - - [15/Jun/2026 07:30:19] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:30:20,804 | INFO | 127.0.0.1 - - [15/Jun/2026 07:30:20] "POST /predict/debug HTTP/1.1" 200 -
+2026-06-15 07:30:49,363 | INFO | 127.0.0.1 - - [15/Jun/2026 07:30:49] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:31:08,461 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:08] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:31:10,238 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:10] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:31:12,093 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:12] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:31:12,095 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:12] "GET /alerts/recent?n=10 HTTP/1.1" 200 -
+2026-06-15 07:31:19,357 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:19] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:31:22,472 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:22] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:31:22,473 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:22] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:31:26,519 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:26] "GET /alerts/recent?n=50 HTTP/1.1" 200 -
+2026-06-15 07:31:50,118 | INFO | 127.0.0.1 - - [15/Jun/2026 07:31:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:32:20,110 | INFO | 127.0.0.1 - - [15/Jun/2026 07:32:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:33:09,182 | INFO | 127.0.0.1 - - [15/Jun/2026 07:33:09] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:33:20,114 | INFO | 127.0.0.1 - - [15/Jun/2026 07:33:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:33:50,117 | INFO | 127.0.0.1 - - [15/Jun/2026 07:33:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:34:20,112 | INFO | 127.0.0.1 - - [15/Jun/2026 07:34:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:34:49,364 | INFO | 127.0.0.1 - - [15/Jun/2026 07:34:49] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:34:58,807 | INFO | 127.0.0.1 - - [15/Jun/2026 07:34:58] "GET /alerts/recent?n=10 HTTP/1.1" 200 -
+2026-06-15 07:34:58,808 | INFO | 127.0.0.1 - - [15/Jun/2026 07:34:58] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:35:20,128 | INFO | 127.0.0.1 - - [15/Jun/2026 07:35:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:35:50,111 | INFO | 127.0.0.1 - - [15/Jun/2026 07:35:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:36:20,118 | INFO | 127.0.0.1 - - [15/Jun/2026 07:36:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:36:50,110 | INFO | 127.0.0.1 - - [15/Jun/2026 07:36:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:37:00,711 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/backend/app.py', reloading
+2026-06-15 07:37:01,337 | INFO |  * Restarting with stat
+2026-06-15 07:37:05,735 | WARNING |  * Debugger is active!
+2026-06-15 07:37:05,753 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:37:06,833 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/model/predict.py', reloading
+2026-06-15 07:37:07,180 | INFO |  * Restarting with stat
+2026-06-15 07:37:09,761 | WARNING |  * Debugger is active!
+2026-06-15 07:37:09,780 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:37:40,155 | INFO | 127.0.0.1 - - [15/Jun/2026 07:37:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:38:40,143 | INFO | 127.0.0.1 - - [15/Jun/2026 07:38:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:39:40,126 | INFO | 127.0.0.1 - - [15/Jun/2026 07:39:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:40:34,986 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 07:40:34,986 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 07:40:34,986 | INFO |  * Restarting with stat
+2026-06-15 07:40:37,700 | WARNING |  * Debugger is active!
+2026-06-15 07:40:37,717 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:40:37,743 | INFO | 127.0.0.1 - - [15/Jun/2026 07:40:37] "GET / HTTP/1.1" 200 -
+2026-06-15 07:40:37,782 | INFO | 127.0.0.1 - - [15/Jun/2026 07:40:37] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:40:37,782 | INFO | 127.0.0.1 - - [15/Jun/2026 07:40:37] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:40:37,890 | INFO | 127.0.0.1 - - [15/Jun/2026 07:40:37] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:40:37,896 | INFO | 127.0.0.1 - - [15/Jun/2026 07:40:37] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:40:40,136 | INFO | 127.0.0.1 - - [15/Jun/2026 07:40:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:41:05,385 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:41:06,102 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:41:06,785 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:06] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:41:07,302 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:07] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:41:07,910 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:07] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:41:13,607 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:13] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:41:13,608 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:13] "GET /alerts/recent?n=10 HTTP/1.1" 200 -
+2026-06-15 07:41:15,302 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:15] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:41:33,680 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:33] "DELETE /record/2 HTTP/1.1" 200 -
+2026-06-15 07:41:33,688 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:33] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:41:33,689 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:33] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:41:35,992 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:35] "DELETE /record/1 HTTP/1.1" 200 -
+2026-06-15 07:41:35,998 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:35] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:41:35,999 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:35] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:41:37,912 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:37] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:41:40,124 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:41:42,670 | INFO | 127.0.0.1 - - [15/Jun/2026 07:41:42] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:42:08,138 | INFO | 127.0.0.1 - - [15/Jun/2026 07:42:08] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:42:38,120 | INFO | 127.0.0.1 - - [15/Jun/2026 07:42:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:42:40,152 | INFO | 127.0.0.1 - - [15/Jun/2026 07:42:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:43:08,125 | INFO | 127.0.0.1 - - [15/Jun/2026 07:43:08] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:43:38,122 | INFO | 127.0.0.1 - - [15/Jun/2026 07:43:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:43:40,123 | INFO | 127.0.0.1 - - [15/Jun/2026 07:43:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:44:08,112 | INFO | 127.0.0.1 - - [15/Jun/2026 07:44:08] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:44:40,142 | INFO | 127.0.0.1 - - [15/Jun/2026 07:44:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:44:40,150 | INFO | 127.0.0.1 - - [15/Jun/2026 07:44:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:45:40,141 | INFO | 127.0.0.1 - - [15/Jun/2026 07:45:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:45:40,184 | INFO | 127.0.0.1 - - [15/Jun/2026 07:45:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:46:40,131 | INFO | 127.0.0.1 - - [15/Jun/2026 07:46:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:46:40,143 | INFO | 127.0.0.1 - - [15/Jun/2026 07:46:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:47:08,161 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:08] "GET / HTTP/1.1" 200 -
+2026-06-15 07:47:08,190 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:08] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:47:08,191 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:08] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:47:08,339 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:08] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:47:08,389 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:08] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:47:08,390 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:08] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:47:27,189 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 07:47:27,189 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 07:47:27,190 | INFO |  * Restarting with stat
+2026-06-15 07:47:30,603 | WARNING |  * Debugger is active!
+2026-06-15 07:47:30,623 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 07:47:30,650 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:30] "GET / HTTP/1.1" 200 -
+2026-06-15 07:47:30,670 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:30] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:47:30,670 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:30] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:47:30,723 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:30] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:47:30,725 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:30] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:47:30,726 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:30] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:47:31,297 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:31] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:47:32,607 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:32] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:47:42,039 | INFO | 127.0.0.1 - - [15/Jun/2026 07:47:42] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 07:48:00,730 | INFO | 127.0.0.1 - - [15/Jun/2026 07:48:00] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:48:21,720 | INFO | 127.0.0.1 - - [15/Jun/2026 07:48:21] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:48:30,733 | INFO | 127.0.0.1 - - [15/Jun/2026 07:48:30] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:49:00,293 | INFO | 127.0.0.1 - - [15/Jun/2026 07:49:00] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:49:00,294 | INFO | 127.0.0.1 - - [15/Jun/2026 07:49:00] "GET /alerts/recent?n=10 HTTP/1.1" 200 -
+2026-06-15 07:49:00,735 | INFO | 127.0.0.1 - - [15/Jun/2026 07:49:00] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:49:00,738 | INFO | 127.0.0.1 - - [15/Jun/2026 07:49:00] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:49:02,401 | INFO | 127.0.0.1 - - [15/Jun/2026 07:49:02] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:49:31,116 | INFO | 127.0.0.1 - - [15/Jun/2026 07:49:31] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:50:00,744 | INFO | 127.0.0.1 - - [15/Jun/2026 07:50:00] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:50:16,414 | INFO | 127.0.0.1 - - [15/Jun/2026 07:50:16] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 07:50:30,736 | INFO | 127.0.0.1 - - [15/Jun/2026 07:50:30] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:50:31,332 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:50:32,115 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 07:50:34,148 | INFO | 127.0.0.1 - - [15/Jun/2026 07:50:34] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:51:00,730 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:00] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:51:00,908 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:00] "POST /predict/debug HTTP/1.1" 200 -
+2026-06-15 07:51:01,502 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:01] "POST /predict/debug HTTP/1.1" 200 -
+2026-06-15 07:51:09,816 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:09] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:51:11,702 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:11] "GET /uploads/5fa7c5e04a024b47ba543297e56b97d8.jpg HTTP/1.1" 200 -
+2026-06-15 07:51:24,617 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:24] "GET / HTTP/1.1" 200 -
+2026-06-15 07:51:24,647 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:24] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:51:24,648 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:24] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:51:24,662 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:24] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:51:24,666 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:24] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:51:27,557 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:27] "GET / HTTP/1.1" 200 -
+2026-06-15 07:51:27,575 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:27] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:51:27,575 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:27] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:51:27,595 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:27] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:51:27,599 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:27] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:51:40,690 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:40] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:51:58,145 | INFO | 127.0.0.1 - - [15/Jun/2026 07:51:58] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:52:10,412 | INFO | 127.0.0.1 - - [15/Jun/2026 07:52:10] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:52:27,603 | INFO | 127.0.0.1 - - [15/Jun/2026 07:52:27] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:52:58,118 | INFO | 127.0.0.1 - - [15/Jun/2026 07:52:58] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:53:28,111 | INFO | 127.0.0.1 - - [15/Jun/2026 07:53:28] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:53:58,113 | INFO | 127.0.0.1 - - [15/Jun/2026 07:53:58] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:54:28,113 | INFO | 127.0.0.1 - - [15/Jun/2026 07:54:28] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:54:58,108 | INFO | 127.0.0.1 - - [15/Jun/2026 07:54:58] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:55:36,988 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:36] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:55:39,047 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:39] "GET / HTTP/1.1" 200 -
+2026-06-15 07:55:39,102 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:39] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:55:39,103 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:39] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:55:39,120 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:39] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:55:39,137 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:39] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:55:39,138 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:39] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:55:40,987 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:40] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 07:55:43,602 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:43] "GET /uploads/5fa7c5e04a024b47ba543297e56b97d8.jpg HTTP/1.1" 200 -
+2026-06-15 07:55:50,001 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:50] "DELETE /record/4 HTTP/1.1" 200 -
+2026-06-15 07:55:50,009 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:50] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:55:50,010 | INFO | 127.0.0.1 - - [15/Jun/2026 07:55:50] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:56:00,139 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:00] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:56:05,609 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:05] "GET / HTTP/1.1" 200 -
+2026-06-15 07:56:05,627 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:05] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:56:05,627 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:05] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:56:05,646 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:05] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:56:05,653 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:05] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:56:05,654 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:05] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:56:11,382 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:11] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:56:36,151 | INFO | 127.0.0.1 - - [15/Jun/2026 07:56:36] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:57:06,162 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:06] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:57:12,646 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:12] "GET / HTTP/1.1" 200 -
+2026-06-15 07:57:12,725 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:12] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:57:12,726 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:12] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:57:12,791 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:12] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:57:12,823 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:12] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:57:12,824 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:12] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:57:21,717 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:21] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:57:21,726 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:21] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:57:21,726 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:21] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:57:26,567 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:26] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:57:27,320 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:27] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:57:29,318 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:29] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:57:31,834 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:31] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 07:57:34,708 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:34] "GET / HTTP/1.1" 200 -
+2026-06-15 07:57:34,777 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:34] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:57:34,779 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:34] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:57:34,794 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:34] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:57:34,802 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:34] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:57:34,804 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:34] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:57:43,114 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:43] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:57:43,117 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:43] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:57:43,118 | INFO | 127.0.0.1 - - [15/Jun/2026 07:57:43] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:58:05,051 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:05] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:58:24,730 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:24] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:58:35,129 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:35] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:58:53,745 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:53] "GET / HTTP/1.1" 200 -
+2026-06-15 07:58:53,804 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:53] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:58:53,804 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:53] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:58:53,850 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:53] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:58:53,883 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:53] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:58:53,885 | INFO | 127.0.0.1 - - [15/Jun/2026 07:58:53] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:59:03,543 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:03] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:59:03,553 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:03] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:59:03,553 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:03] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:59:13,233 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:13] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:59:17,144 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:17] "GET / HTTP/1.1" 200 -
+2026-06-15 07:59:17,170 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:17] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:59:17,170 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:17] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:59:17,188 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:17] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:59:17,192 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:17] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:59:17,193 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:17] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:59:25,371 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:25] "GET / HTTP/1.1" 200 -
+2026-06-15 07:59:25,407 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:25] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:59:25,407 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:25] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:59:25,431 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:25] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:59:25,441 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:25] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:59:25,442 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:25] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:59:26,806 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:26] "GET / HTTP/1.1" 200 -
+2026-06-15 07:59:27,534 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:27] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 07:59:27,534 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:27] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 07:59:27,550 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:27] "GET /health HTTP/1.1" 200 -
+2026-06-15 07:59:27,556 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:27] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:59:27,556 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:27] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:59:38,877 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:38] "POST /detect HTTP/1.1" 200 -
+2026-06-15 07:59:38,884 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:38] "GET /damages HTTP/1.1" 200 -
+2026-06-15 07:59:38,884 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:38] "GET /stats HTTP/1.1" 200 -
+2026-06-15 07:59:58,122 | INFO | 127.0.0.1 - - [15/Jun/2026 07:59:58] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:00:28,110 | INFO | 127.0.0.1 - - [15/Jun/2026 08:00:28] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:00:38,556 | INFO | 127.0.0.1 - - [15/Jun/2026 08:00:38] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:00:58,125 | INFO | 127.0.0.1 - - [15/Jun/2026 08:00:58] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:01:27,646 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:27] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:01:27,648 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:27] "GET / HTTP/1.1" 200 -
+2026-06-15 08:01:27,681 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:27] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:01:27,681 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:27] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:01:27,697 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:27] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:01:27,704 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:27] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:01:27,705 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:27] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:01:39,373 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 08:01:39,373 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 08:01:39,374 | INFO |  * Restarting with stat
+2026-06-15 08:01:42,234 | WARNING |  * Debugger is active!
+2026-06-15 08:01:42,251 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 08:01:42,279 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:42] "GET / HTTP/1.1" 200 -
+2026-06-15 08:01:42,301 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:42] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:01:42,301 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:42] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:01:42,316 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:42] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:01:42,318 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:42] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:01:42,318 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:42] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:01:45,073 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:45] "GET /uploads/d84e06a5e3f44fb4b52552a0a1d285fa.jpg HTTP/1.1" 200 -
+2026-06-15 08:01:47,031 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:47] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 08:01:53,239 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:01:54,010 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:01:57,334 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:57] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:01:57,340 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:57] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:01:57,340 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:57] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:01:59,381 | INFO | 127.0.0.1 - - [15/Jun/2026 08:01:59] "GET /uploads/6397c2e5a5c142baaabf7600c4087db6.jpeg HTTP/1.1" 200 -
+2026-06-15 08:02:12,556 | INFO | 127.0.0.1 - - [15/Jun/2026 08:02:12] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:02:31,048 | INFO | 127.0.0.1 - - [15/Jun/2026 08:02:31] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 08:02:42,332 | INFO | 127.0.0.1 - - [15/Jun/2026 08:02:42] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:02:47,701 | INFO | 127.0.0.1 - - [15/Jun/2026 08:02:47] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:02:47,707 | INFO | 127.0.0.1 - - [15/Jun/2026 08:02:47] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:02:47,707 | INFO | 127.0.0.1 - - [15/Jun/2026 08:02:47] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:03:00,653 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:00] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:01,270 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:01] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:01,469 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:01] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:01,599 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:01] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:09,347 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:09] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:03:09,353 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:09] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:09,353 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:09] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:03:12,332 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:12] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:03:15,502 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:15] "GET / HTTP/1.1" 200 -
+2026-06-15 08:03:15,557 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:15] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:03:15,558 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:15] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:03:15,579 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:15] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:03:15,584 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:15] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:15,586 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:15] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:03:16,350 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:16] "GET / HTTP/1.1" 200 -
+2026-06-15 08:03:16,361 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:16] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:03:16,365 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:16] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:03:16,381 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:16] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:03:16,387 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:16] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:16,388 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:16] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:03:27,198 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:27] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:03:27,203 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:27] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:03:27,204 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:27] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:03:31,529 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:31] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 08:03:34,348 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:34] "GET /uploads/6397c2e5a5c142baaabf7600c4087db6.jpeg HTTP/1.1" 200 -
+2026-06-15 08:03:36,398 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:36] "GET /uploads/d84e06a5e3f44fb4b52552a0a1d285fa.jpg HTTP/1.1" 200 -
+2026-06-15 08:03:46,382 | INFO | 127.0.0.1 - - [15/Jun/2026 08:03:46] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:04:17,121 | INFO | 127.0.0.1 - - [15/Jun/2026 08:04:17] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:04:30,664 | INFO | 127.0.0.1 - - [15/Jun/2026 08:04:30] "GET / HTTP/1.1" 200 -
+2026-06-15 08:04:31,336 | INFO | 127.0.0.1 - - [15/Jun/2026 08:04:31] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:04:31,337 | INFO | 127.0.0.1 - - [15/Jun/2026 08:04:31] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:04:31,456 | INFO | 127.0.0.1 - - [15/Jun/2026 08:04:31] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:04:31,481 | INFO | 127.0.0.1 - - [15/Jun/2026 08:04:31] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:04:31,483 | INFO | 127.0.0.1 - - [15/Jun/2026 08:04:31] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:05:02,118 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:02] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:05:32,107 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:32] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:05:35,555 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:35] "GET / HTTP/1.1" 200 -
+2026-06-15 08:05:35,579 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:35] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:05:35,580 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:35] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:05:35,588 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:35] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:05:35,595 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:35] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:05:35,597 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:35] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:05:46,186 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:46] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:05:46,195 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:46] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:05:46,196 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:46] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:05:48,400 | INFO | 127.0.0.1 - - [15/Jun/2026 08:05:48] "GET /uploads/4465861c6f5d41898e96ecc4bd1d3915.png HTTP/1.1" 200 -
+2026-06-15 08:06:05,648 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:05] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:06:16,045 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:16] "GET / HTTP/1.1" 200 -
+2026-06-15 08:06:16,104 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:16] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:06:16,107 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:16] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:06:16,127 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:16] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:06:16,143 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:16] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:06:16,146 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:16] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:06:23,619 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:23] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:06:23,632 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:23] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:06:23,632 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:23] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:06:47,123 | INFO | 127.0.0.1 - - [15/Jun/2026 08:06:47] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:07:17,111 | INFO | 127.0.0.1 - - [15/Jun/2026 08:07:17] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:07:47,107 | INFO | 127.0.0.1 - - [15/Jun/2026 08:07:47] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:08:14,686 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 08:08:14,687 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 08:08:14,687 | INFO |  * Restarting with stat
+2026-06-15 08:08:17,844 | WARNING |  * Debugger is active!
+2026-06-15 08:08:17,863 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 08:08:17,890 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:17] "GET / HTTP/1.1" 200 -
+2026-06-15 08:08:17,916 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:17] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:08:17,917 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:17] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:08:17,934 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:17] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:08:17,936 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:17] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:08:17,937 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:17] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:08:21,397 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:21] "GET / HTTP/1.1" 200 -
+2026-06-15 08:08:21,416 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:21] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:08:21,416 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:21] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:08:21,425 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:21] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:08:21,430 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:21] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:08:21,432 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:21] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:08:29,380 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:08:30,193 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:08:32,891 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:32] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:08:32,899 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:32] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:08:32,899 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:32] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:08:32,902 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:32] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 08:08:52,117 | INFO | 127.0.0.1 - - [15/Jun/2026 08:08:52] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:09:22,112 | INFO | 127.0.0.1 - - [15/Jun/2026 08:09:22] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:09:52,107 | INFO | 127.0.0.1 - - [15/Jun/2026 08:09:52] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:10:22,106 | INFO | 127.0.0.1 - - [15/Jun/2026 08:10:22] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:10:52,117 | INFO | 127.0.0.1 - - [15/Jun/2026 08:10:52] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:11:22,110 | INFO | 127.0.0.1 - - [15/Jun/2026 08:11:22] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:12:40,152 | INFO | 127.0.0.1 - - [15/Jun/2026 08:12:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:12:45,820 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/backend/app.py', reloading
+2026-06-15 08:12:46,468 | INFO |  * Restarting with stat
+2026-06-15 08:12:50,855 | WARNING |  * Debugger is active!
+2026-06-15 08:12:50,873 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 08:13:40,164 | INFO | 127.0.0.1 - - [15/Jun/2026 08:13:40] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:14:17,414 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 08:14:17,414 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 08:14:17,415 | INFO |  * Restarting with stat
+2026-06-15 08:14:20,264 | WARNING |  * Debugger is active!
+2026-06-15 08:14:20,282 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 08:14:20,308 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:20] "GET / HTTP/1.1" 200 -
+2026-06-15 08:14:20,349 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:20] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:14:20,349 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:20] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:14:20,455 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:14:20,461 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:20] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:14:20,462 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:20] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:14:34,281 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:34] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:14:50,484 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:14:54,129 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:14:54,995 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:14:57,954 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:57] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:14:57,959 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:57] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:14:57,960 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:57] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:14:57,965 | INFO | 127.0.0.1 - - [15/Jun/2026 08:14:57] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 08:15:10,943 | INFO | 127.0.0.1 - - [15/Jun/2026 08:15:10] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:15:10,950 | INFO | 127.0.0.1 - - [15/Jun/2026 08:15:10] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:15:10,950 | INFO | 127.0.0.1 - - [15/Jun/2026 08:15:10] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:15:18,799 | INFO | 127.0.0.1 - - [15/Jun/2026 08:15:18] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:15:20,478 | INFO | 127.0.0.1 - - [15/Jun/2026 08:15:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:15:51,120 | INFO | 127.0.0.1 - - [15/Jun/2026 08:15:51] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:16:21,111 | INFO | 127.0.0.1 - - [15/Jun/2026 08:16:21] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:16:51,109 | INFO | 127.0.0.1 - - [15/Jun/2026 08:16:51] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:16:53,233 | INFO |  * Detected change in '/Users/dev/Downloads/mini akki/backend/db.py', reloading
+2026-06-15 08:16:53,790 | INFO |  * Restarting with stat
+2026-06-15 08:17:04,715 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 08:17:04,715 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 08:17:04,715 | INFO |  * Restarting with stat
+2026-06-15 08:17:08,307 | WARNING |  * Debugger is active!
+2026-06-15 08:17:08,335 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 08:17:08,365 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:08] "GET / HTTP/1.1" 200 -
+2026-06-15 08:17:08,418 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:08] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 08:17:08,419 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:08] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 08:17:08,575 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:08] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:17:08,583 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:08] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:17:08,586 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:08] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:17:16,268 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:17:17,149 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 08:17:20,127 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:20] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:17:20,134 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:20] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:17:20,134 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:20] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:17:20,139 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:20] "GET /uploads/3abf487618eb493a811d81a2427a67a3.png HTTP/1.1" 200 -
+2026-06-15 08:17:21,120 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:21] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:17:37,420 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:37] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 08:17:38,597 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:17:47,617 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:47] "POST /detect HTTP/1.1" 200 -
+2026-06-15 08:17:47,627 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:47] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:17:47,627 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:47] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:17:47,630 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:47] "GET /uploads/2eeb8e76d578492ab2c54e57f961f36e.jpeg HTTP/1.1" 200 -
+2026-06-15 08:17:54,249 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:54] "GET /uploads/3abf487618eb493a811d81a2427a67a3.png HTTP/1.1" 200 -
+2026-06-15 08:17:56,782 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:56] "GET /uploads/2eeb8e76d578492ab2c54e57f961f36e.jpeg HTTP/1.1" 200 -
+2026-06-15 08:17:59,833 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:59] "DELETE /record/9 HTTP/1.1" 200 -
+2026-06-15 08:17:59,839 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:59] "GET /damages HTTP/1.1" 200 -
+2026-06-15 08:17:59,839 | INFO | 127.0.0.1 - - [15/Jun/2026 08:17:59] "GET /stats HTTP/1.1" 200 -
+2026-06-15 08:18:08,603 | INFO | 127.0.0.1 - - [15/Jun/2026 08:18:08] "GET /health HTTP/1.1" 200 -
+2026-06-15 08:18:16,508 | INFO | 127.0.0.1 - - [15/Jun/2026 08:18:16] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 08:18:22,150 | INFO | 127.0.0.1 - - [15/Jun/2026 08:18:22] "GET /uploads/d84e06a5e3f44fb4b52552a0a1d285fa.jpg HTTP/1.1" 200 -
+2026-06-15 08:18:23,953 | INFO | 127.0.0.1 - - [15/Jun/2026 08:18:23] "GET /uploads/4465861c6f5d41898e96ecc4bd1d3915.png HTTP/1.1" 200 -
+2026-06-15 08:18:25,982 | INFO | 127.0.0.1 - - [15/Jun/2026 08:18:25] "GET /uploads/6397c2e5a5c142baaabf7600c4087db6.jpeg HTTP/1.1" 200 -
+2026-06-15 08:18:27,847 | INFO | 127.0.0.1 - - [15/Jun/2026 08:18:27] "GET /uploads/daa29be43b7747a8bfe82e6024da0375.jpeg HTTP/1.1" 200 -
+2026-06-15 08:18:29,651 | INFO | 127.0.0.1 - - [15/Jun/2026 08:18:29] "GET /uploads/3abf487618eb493a811d81a2427a67a3.png HTTP/1.1" 200 -
+2026-06-15 10:01:39,050 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.0.0.2:5001
+2026-06-15 10:01:39,051 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 10:01:39,051 | INFO |  * Restarting with stat
+2026-06-15 10:01:43,171 | WARNING |  * Debugger is active!
+2026-06-15 10:01:43,192 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 10:01:43,221 | INFO | 127.0.0.1 - - [15/Jun/2026 10:01:43] "GET / HTTP/1.1" 200 -
+2026-06-15 10:01:43,287 | INFO | 127.0.0.1 - - [15/Jun/2026 10:01:43] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 10:01:43,289 | INFO | 127.0.0.1 - - [15/Jun/2026 10:01:43] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 10:01:43,316 | INFO | 127.0.0.1 - - [15/Jun/2026 10:01:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:01:43,325 | INFO | 127.0.0.1 - - [15/Jun/2026 10:01:43] "GET /stats HTTP/1.1" 200 -
+2026-06-15 10:01:43,334 | INFO | 127.0.0.1 - - [15/Jun/2026 10:01:43] "GET /damages HTTP/1.1" 200 -
+2026-06-15 10:02:13,643 | INFO | 127.0.0.1 - - [15/Jun/2026 10:02:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:02:43,654 | INFO | 127.0.0.1 - - [15/Jun/2026 10:02:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:03:13,645 | INFO | 127.0.0.1 - - [15/Jun/2026 10:03:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:03:43,655 | INFO | 127.0.0.1 - - [15/Jun/2026 10:03:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:04:13,665 | INFO | 127.0.0.1 - - [15/Jun/2026 10:04:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:04:43,658 | INFO | 127.0.0.1 - - [15/Jun/2026 10:04:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:05:13,650 | INFO | 127.0.0.1 - - [15/Jun/2026 10:05:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:05:43,649 | INFO | 127.0.0.1 - - [15/Jun/2026 10:05:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:06:13,648 | INFO | 127.0.0.1 - - [15/Jun/2026 10:06:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:06:43,648 | INFO | 127.0.0.1 - - [15/Jun/2026 10:06:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:07:13,646 | INFO | 127.0.0.1 - - [15/Jun/2026 10:07:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:07:43,664 | INFO | 127.0.0.1 - - [15/Jun/2026 10:07:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:08:13,642 | INFO | 127.0.0.1 - - [15/Jun/2026 10:08:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:08:43,652 | INFO | 127.0.0.1 - - [15/Jun/2026 10:08:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:09:13,669 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:09:31,094 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:31] "GET /uploads/3abf487618eb493a811d81a2427a67a3.png HTTP/1.1" 200 -
+2026-06-15 10:09:36,149 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:36] "GET /uploads/d84e06a5e3f44fb4b52552a0a1d285fa.jpg HTTP/1.1" 200 -
+2026-06-15 10:09:43,343 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:09:51,204 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 10:09:52,020 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 10:09:52,716 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:52] "POST /detect HTTP/1.1" 200 -
+2026-06-15 10:09:52,721 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:52] "GET /damages HTTP/1.1" 200 -
+2026-06-15 10:09:52,722 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:52] "GET /stats HTTP/1.1" 200 -
+2026-06-15 10:09:52,731 | INFO | 127.0.0.1 - - [15/Jun/2026 10:09:52] "GET /uploads/1a95f23c445348cbb7f0f5a65a85bd36.jpeg HTTP/1.1" 200 -
+2026-06-15 10:10:13,641 | INFO | 127.0.0.1 - - [15/Jun/2026 10:10:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:10:43,671 | INFO | 127.0.0.1 - - [15/Jun/2026 10:10:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:11:13,647 | INFO | 127.0.0.1 - - [15/Jun/2026 10:11:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:11:43,651 | INFO | 127.0.0.1 - - [15/Jun/2026 10:11:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:12:13,646 | INFO | 127.0.0.1 - - [15/Jun/2026 10:12:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:12:43,649 | INFO | 127.0.0.1 - - [15/Jun/2026 10:12:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:13:13,642 | INFO | 127.0.0.1 - - [15/Jun/2026 10:13:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:13:43,662 | INFO | 127.0.0.1 - - [15/Jun/2026 10:13:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:14:13,647 | INFO | 127.0.0.1 - - [15/Jun/2026 10:14:13] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:14:43,653 | INFO | 127.0.0.1 - - [15/Jun/2026 10:14:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:15:43,661 | INFO | 127.0.0.1 - - [15/Jun/2026 10:15:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:16:41,462 | INFO | 127.0.0.1 - - [15/Jun/2026 10:16:41] "GET /health HTTP/1.1" 200 -
+2026-06-15 10:16:43,358 | INFO | 127.0.0.1 - - [15/Jun/2026 10:16:43] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:46:25,413 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.27.233.226:5001
+2026-06-15 18:46:25,413 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-15 18:46:25,414 | INFO |  * Restarting with stat
+2026-06-15 18:46:29,726 | WARNING |  * Debugger is active!
+2026-06-15 18:46:29,770 | INFO |  * Debugger PIN: 138-679-690
+2026-06-15 18:46:29,807 | INFO | 127.0.0.1 - - [15/Jun/2026 18:46:29] "GET / HTTP/1.1" 200 -
+2026-06-15 18:46:29,881 | INFO | 127.0.0.1 - - [15/Jun/2026 18:46:29] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 18:46:29,881 | INFO | 127.0.0.1 - - [15/Jun/2026 18:46:29] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 18:46:29,986 | INFO | 127.0.0.1 - - [15/Jun/2026 18:46:29] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:46:29,994 | INFO | 127.0.0.1 - - [15/Jun/2026 18:46:29] "GET /damages HTTP/1.1" 200 -
+2026-06-15 18:46:29,995 | INFO | 127.0.0.1 - - [15/Jun/2026 18:46:29] "GET /stats HTTP/1.1" 200 -
+2026-06-15 18:46:47,686 | INFO | 127.0.0.1 - - [15/Jun/2026 18:46:47] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 18:47:00,159 | INFO | 127.0.0.1 - - [15/Jun/2026 18:47:00] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:47:25,292 | INFO | 127.0.0.1 - - [15/Jun/2026 18:47:25] "[31m[1mPOST /detect HTTP/1.1[0m" 400 -
+2026-06-15 18:47:30,017 | INFO | 127.0.0.1 - - [15/Jun/2026 18:47:30] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:47:58,188 | INFO | 127.0.0.1 - - [15/Jun/2026 18:47:58] "[31m[1mPOST /detect HTTP/1.1[0m" 422 -
+2026-06-15 18:48:00,014 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:00] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:48:30,018 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:30] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:48:41,415 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 18:48:42,202 | WARNING | Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-06-15 18:48:43,298 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:43] "POST /detect HTTP/1.1" 200 -
+2026-06-15 18:48:43,308 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:43] "GET /damages HTTP/1.1" 200 -
+2026-06-15 18:48:43,308 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:43] "GET /stats HTTP/1.1" 200 -
+2026-06-15 18:48:43,319 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:43] "GET /uploads/c11fb53eb0a144e082fe3dd30f7fd325.jpg HTTP/1.1" 200 -
+2026-06-15 18:48:56,929 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:56] "POST /detect HTTP/1.1" 200 -
+2026-06-15 18:48:56,947 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:56] "GET /stats HTTP/1.1" 200 -
+2026-06-15 18:48:56,947 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:56] "GET /damages HTTP/1.1" 200 -
+2026-06-15 18:48:56,957 | INFO | 127.0.0.1 - - [15/Jun/2026 18:48:56] "GET /uploads/ef9cb2ec89e141cdb78d5ac8633bd349.jpeg HTTP/1.1" 200 -
+2026-06-15 18:49:00,013 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:00] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:49:12,787 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:12] "GET /damages HTTP/1.1" 200 -
+2026-06-15 18:49:13,334 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:13] "GET /stats HTTP/1.1" 200 -
+2026-06-15 18:49:13,337 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:13] "GET /alerts/recent?n=10 HTTP/1.1" 200 -
+2026-06-15 18:49:49,448 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:49] "GET / HTTP/1.1" 200 -
+2026-06-15 18:49:49,491 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:49] "GET /css/style.css HTTP/1.1" 200 -
+2026-06-15 18:49:49,492 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:49] "GET /js/app.js HTTP/1.1" 200 -
+2026-06-15 18:49:49,612 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:49] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:49:49,620 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:49] "GET /damages HTTP/1.1" 200 -
+2026-06-15 18:49:49,622 | INFO | 127.0.0.1 - - [15/Jun/2026 18:49:49] "GET /stats HTTP/1.1" 200 -
+2026-06-15 18:50:09,025 | INFO | 127.0.0.1 - - [15/Jun/2026 18:50:09] "POST /detect HTTP/1.1" 200 -
+2026-06-15 18:50:09,038 | INFO | 127.0.0.1 - - [15/Jun/2026 18:50:09] "GET /damages HTTP/1.1" 200 -
+2026-06-15 18:50:09,038 | INFO | 127.0.0.1 - - [15/Jun/2026 18:50:09] "GET /stats HTTP/1.1" 200 -
+2026-06-15 18:50:09,047 | INFO | 127.0.0.1 - - [15/Jun/2026 18:50:09] "GET /uploads/593f4473a7a4480287f598a4b0398e76.jpg HTTP/1.1" 200 -
+2026-06-15 18:50:19,623 | INFO | 127.0.0.1 - - [15/Jun/2026 18:50:19] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:50:50,211 | INFO | 127.0.0.1 - - [15/Jun/2026 18:50:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:51:20,170 | INFO | 127.0.0.1 - - [15/Jun/2026 18:51:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:51:50,150 | INFO | 127.0.0.1 - - [15/Jun/2026 18:51:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:52:20,153 | INFO | 127.0.0.1 - - [15/Jun/2026 18:52:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:52:50,152 | INFO | 127.0.0.1 - - [15/Jun/2026 18:52:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:53:38,209 | INFO | 127.0.0.1 - - [15/Jun/2026 18:53:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:54:38,302 | INFO | 127.0.0.1 - - [15/Jun/2026 18:54:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:55:38,192 | INFO | 127.0.0.1 - - [15/Jun/2026 18:55:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:56:15,849 | INFO | 127.0.0.1 - - [15/Jun/2026 18:56:15] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:56:19,627 | INFO | 127.0.0.1 - - [15/Jun/2026 18:56:19] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:56:50,148 | INFO | 127.0.0.1 - - [15/Jun/2026 18:56:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:57:20,178 | INFO | 127.0.0.1 - - [15/Jun/2026 18:57:20] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:58:38,283 | INFO | 127.0.0.1 - - [15/Jun/2026 18:58:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 18:59:38,196 | INFO | 127.0.0.1 - - [15/Jun/2026 18:59:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:00:38,201 | INFO | 127.0.0.1 - - [15/Jun/2026 19:00:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:01:38,244 | INFO | 127.0.0.1 - - [15/Jun/2026 19:01:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:02:38,308 | INFO | 127.0.0.1 - - [15/Jun/2026 19:02:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:03:38,253 | INFO | 127.0.0.1 - - [15/Jun/2026 19:03:38] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:22:50,109 | INFO | 127.0.0.1 - - [15/Jun/2026 19:22:50] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:39:09,259 | INFO | 127.0.0.1 - - [15/Jun/2026 19:39:09] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:40:30,074 | INFO | 127.0.0.1 - - [15/Jun/2026 19:40:30] "GET /health HTTP/1.1" 200 -
+2026-06-15 19:42:31,584 | INFO | 127.0.0.1 - - [15/Jun/2026 19:42:31] "GET /health HTTP/1.1" 200 -
