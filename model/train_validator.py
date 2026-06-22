@@ -300,7 +300,8 @@ def generate_validator_dataset(n_road=1500, n_nonroad=1500):
         '3d473656eb174971bdf5fa35feb368a4.jpeg',
         'a24b1b4bbf404be79df127a0f38878d8.jpeg',
         '1d6ad1d2653447eda7bac44b3bafc17f.jpeg',
-        'road_damage_new.jpg'
+        'road_damage_new.jpg',
+        'rural_road_new.jpg'
     ]
     
     real_non_roads = [

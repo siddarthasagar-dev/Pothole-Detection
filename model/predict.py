@@ -194,7 +194,7 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
     
     faces = []
     if not face_cascade.empty():
-        faces = face_cascade.detectMultiScale(gray_img, scaleFactor=1.1, minNeighbors=3, minSize=(25, 25))
+        faces = face_cascade.detectMultiScale(gray_img, scaleFactor=1.1, minNeighbors=5, minSize=(25, 25))
     else:
         print(f"[Validate] Warning: Haar face cascade could not be loaded from {face_cascade_path}")
     
@@ -417,33 +417,8 @@ def detect_and_annotate(file_bytes: bytes) -> tuple[dict, bytes]:
             'status': 'verified'
         })
 
-    # Fallback overall image classification to preserve high recall
-    if len(verified_detections) == 0:
-        whole_preprocessed = preprocess_crop(img)
-        whole_probs = damage_model.predict(whole_preprocessed, verbose=0)[0]
-        whole_idx = int(np.argmax(whole_probs))
-        whole_label = DAMAGE_CLASSES[whole_idx]
-        whole_conf = float(whole_probs[whole_idx]) * 100
-        
-        if whole_label != 'normal' and whole_conf >= 70.0:
-            fb_w = int(orig_w * 0.35)
-            fb_h = int(orig_h * 0.25)
-            fb_x = int((orig_w - fb_w) / 2)
-            fb_y = int(orig_h * 0.55)
-            
-            roi_gray = gray_img[fb_y:fb_y+fb_h, fb_x:fb_x+fb_w]
-            mean_bright = np.mean(roi_gray) if roi_gray.size > 0 else 0
-            std_bright = np.std(roi_gray) if roi_gray.size > 0 else 0
-            
-            if mean_bright < 185 and std_bright >= 12.0:
-                severity = get_severity(whole_label, whole_conf)
-                verified_detections.append({
-                    'damage_type': whole_label,
-                    'confidence': round(whole_conf, 2),
-                    'bounding_box': [fb_x, fb_y, fb_w, fb_h],
-                    'severity': severity,
-                    'status': 'fallback_verified'
-                })
+    # Fallback overall image classification removed to prevent false positives on clean roads
+    pass
 
     # ── DRAW OVERLAYS & ANNOTATIONS ──
     annotated_img = img.copy()
