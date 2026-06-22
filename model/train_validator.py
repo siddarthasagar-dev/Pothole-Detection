@@ -314,7 +314,8 @@ def generate_validator_dataset(n_road=1500, n_nonroad=1500):
         'd424d5b23f454d6b929c9d8b89e4f472.png',
         '5fa7c5e04a024b47ba543297e56b97d8.jpg',
         '27582a48968248dabe7266f70d856e4a.jpg',
-        '85e3c41fadf74ff2a87f8da1b89c1be6.png'
+        '85e3c41fadf74ff2a87f8da1b89c1be6.png',
+        'krishna_silhouette_new.jpg'
     ]
     
     print("  Loading real road crops...")
